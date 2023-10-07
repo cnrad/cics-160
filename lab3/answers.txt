@@ -1,0 +1,13 @@
+2.2
+1. Yes, because it's code that will be executed when the file is used, regardless of if it's the class or not. It's not enclosed by a function to be run only when __main__ is called.
+2. You can test the control flow with other print statements to execute when other certain parts of the code are run, and then you can tell where in the code certain print statements are running from.
+3. import statements import everything in the code, not just the class.
+
+2.3
+1. No, because the code is enclosed in an function that only runs when the __main__ function is called, so it's not run normally on import.
+2. Yes, because running Car.py is just running the __main__ function in that file.
+3. It's a safe way to stop code from running when you import it in other files.
+4. That the value of __name__ is different for that file when you import it vs when you run it directly.
+
+3.1
+1. The error says "AttributeError: 'ElectricCar' object has no attribute 'make_model'. Did you mean: 'get_make_model'" This essentially means that ElectricCar is not inheriting the class from Car, therefore has none of the attributes or methods from Car. The line super().__init__() calls the constructor of Car, so without it, you aren't actually inheriting the Car class.
